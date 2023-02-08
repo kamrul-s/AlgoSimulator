@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="GraphShow" minHeight="800.0" minWidth="1250.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ShowGraphController">
+   <children>
+      <Button fx:id="showButton" layoutX="545.0" layoutY="27.0" mnemonicParsing="false" onAction="#loadnewGraph" text="Show Graph">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

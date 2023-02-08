@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane fx:id="rootPane" minHeight="1000.0" minWidth="2000.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: D:\Study\L-1 T-2\Algo Simulator\Client\src\client;" styleClass="openwelcomebg" stylesheets="@BgStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.WelcomeController">
+   <children>
+      <Button fx:id="exitButton" layoutX="274.0" layoutY="871.0" minWidth="80.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="50.0" prefWidth="100.0" style="-fx-border-color: #800000; -fx-border-width: 5;" styleClass="exitButtonbg" stylesheets="@buttonStyle.css" text="Exit" textFill="RED">
+         <font>
+            <Font name="Berlin Sans FB" size="28.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="491.0" layoutY="177.0" prefHeight="148.0" prefWidth="992.0" text="ALGORITHM SIMULATOR" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="50.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#64c8ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="openButton" layoutX="1679.0" layoutY="871.0" minWidth="80.0" mnemonicParsing="false" onAction="#openAction" prefHeight="69.0" prefWidth="127.0" style="-fx-border-color: #7CFC00; -fx-border-width: 5;" styleClass="startButtonbg" stylesheets="@buttonStyle.css" text="Start" textFill="RED">
+         <font>
+            <Font name="Comic Sans MS" size="28.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

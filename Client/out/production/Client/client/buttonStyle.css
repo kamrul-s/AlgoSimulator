@@ -1,0 +1,70 @@
+.startButtonbg{
+    -fx-background-radius: 80;
+    -fx-border-radius: 50;
+    -fx-background-color: white;
+    -fx-text-fill: darkgreen;
+}
+
+.startButtonbg:hover{
+    -fx-background-color: darkgreen;
+    -fx-text-fill: white;
+}
+
+/*
+.startButtonbg:pressed{
+    -fx-background-color: green;
+    -fx-text-fill: black;
+}
+*/
+
+.exitButtonbg{
+    -fx-background-radius: 80;
+    -fx-border-radius: 50;
+    -fx-background-color: white;
+    -fx-text-fill: 	red;
+}
+
+.exitButtonbg:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+/*.exitButtonbg:pressed{
+    -fx-background-color: brown;
+    -fx-text-fill: black;
+}*/
+
+.backButtonbg{
+    -fx-background-radius: 80;
+    -fx-border-radius: 50;
+    -fx-background-color: black;
+    -fx-text-fill: 	darkred;
+}
+.backButtonbg:hover{
+    -fx-background-color: darkred;
+    -fx-text-fill: 	black;
+}
+
+.selectButtonbg{
+    -fx-background-radius: 80;
+    -fx-border-radius: 50;
+    -fx-background-color: lime;
+    -fx-text-fill: darkgreen;
+}
+
+.selectButtonbg:hover{
+    -fx-background-color: darkgreen;
+    -fx-text-fill: lime;
+}
+
+.completeButtonbg{
+    -fx-background-radius: 80;
+    -fx-border-radius: 50;
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+}
+
+.completeButtonbg:hover{
+    -fx-background-color: white;
+    -fx-text-fill: darkblue;
+}

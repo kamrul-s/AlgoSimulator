@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="plotPane" minHeight="1000.0" minWidth="2000.0" prefHeight="1000.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.PlotGraphController">
+    <children>
+        <SplitPane dividerPositions="0.2" layoutX="123.0" layoutY="361.0" prefHeight="800.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <VBox layoutX="25.0" layoutY="101.0" spacing="30.0">
+                            <children>
+                                <RadioButton fx:id="weightedButton" layoutX="25.0" layoutY="101.0" mnemonicParsing="false" text="Weighted">
+                                    <font>
+                                        <Font name="Agency FB Bold" size="24.0" />
+                                    </font>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="group1" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="unweightedButton" layoutX="25.0" layoutY="167.0" mnemonicParsing="false" text="Unweighted" toggleGroup="$group1">
+                                    <font>
+                                        <Font name="Agency FB Bold" size="24.0" />
+                                    </font>
+                                </RadioButton>
+                            </children>
+                        </VBox>
+                        <VBox layoutX="28.0" layoutY="309.0" spacing="30.0">
+                            <children>
+                                <RadioButton fx:id="directedButton" layoutX="25.0" layoutY="228.0" mnemonicParsing="false" text="Directed">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="group2" />
+                                    </toggleGroup>
+                                    <font>
+                                        <Font name="Agency FB Bold" size="24.0" />
+                                    </font>
+                                </RadioButton>
+                                <RadioButton fx:id="undirectedButton" layoutX="25.0" layoutY="290.0" mnemonicParsing="false" text="Undirected" toggleGroup="$group2">
+                                    <font>
+                                        <Font name="Agency FB Bold" size="24.0" />
+                                    </font>
+                                </RadioButton>
+                            </children>
+                        </VBox>
+                        <Button fx:id="backButton" layoutX="28.0" layoutY="918.0" mnemonicParsing="false" onAction="#backclick" prefHeight="53.0" prefWidth="104.0" style="-fx-border-color: #8B0000; -fx-border-width: 5;" styleClass="backButtonbg" stylesheets="@buttonStyle.css" text="Back" textFill="#b20f0f">
+                            <font>
+                                <Font name="Arial Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="nextButton" layoutX="244.0" layoutY="918.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="53.0" prefWidth="104.0" style="-fx-border-color: #8B0000; -fx-border-width: 5;" styleClass="backButtonbg" stylesheets="@buttonStyle.css" text="Next" textFill="#b20f0f">
+                            <font>
+                                <Font name="Arial Bold" size="24.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="showCircle" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="completeButton" layoutX="1349.0" layoutY="902.0" mnemonicParsing="false" onAction="#completeAction" prefHeight="53.0" prefWidth="153.0" style="-fx-border-color: #000080; -fx-border-width: 5;" styleClass="completeButtonbg" stylesheets="@buttonStyle.css" text="Complete" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="addnodeButton" layoutX="118.0" layoutY="54.0" mnemonicParsing="false" onAction="#addnodeAction" text="+">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="finishNodeButton" layoutX="161.0" layoutY="54.0" mnemonicParsing="false" onAction="#finishNodeAction" text="Finish">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="70.0" layoutY="54.0" prefHeight="32.0" prefWidth="38.0" text="Node">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="addedgeButton" layoutX="458.0" layoutY="54.0" mnemonicParsing="false" onAction="#addedgeAction" text="+">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="finishEdgeButton" layoutX="501.0" layoutY="54.0" mnemonicParsing="false" onAction="#finishEdgeButton" text="Finish">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="410.0" layoutY="54.0" prefHeight="32.0" prefWidth="38.0" text="Edge">
+                            <font>
+                                <Font name="Agency FB Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="refreshButton" layoutX="120.0" layoutY="902.0" mnemonicParsing="false" onAction="#refreshAction" prefHeight="53.0" prefWidth="137.0" style="-fx-border-color: #000080; -fx-border-width: 5;" styleClass="completeButtonbg" stylesheets="@buttonStyle.css" text="Refresh" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="weightNext" layoutX="1245.0" layoutY="76.0" minHeight="35.0" minWidth="40.0" mnemonicParsing="false" onAction="#weightNextAction" prefHeight="35.0" prefWidth="68.0" text="Enter" textFill="#643200">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <ChoiceBox fx:id="weightLabel" layoutX="1079.0" layoutY="42.0" prefWidth="150.0" />
+                        <TextField fx:id="weightInput" layoutX="1184.0" layoutY="76.0" prefHeight="35.0" prefWidth="45.0" />
+                        <Button fx:id="inputComplete" layoutX="1322.0" layoutY="76.0" minHeight="35.0" minWidth="40.0" mnemonicParsing="false" onAction="#inputCompleteAction" prefHeight="35.0" prefWidth="104.0" text="Complete" textFill="#643200">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                  <Label layoutX="1112.0" layoutY="24.0" text="Insert Weight">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
